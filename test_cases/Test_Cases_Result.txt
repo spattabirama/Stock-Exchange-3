@@ -1,0 +1,100 @@
+Catalog Server test case result:
+TC1:
+Request sent: http://localhost:8103/lookup/GameStart
+Response received:  {'data': {'name': 'GameStart', 'price': 2.2, 'quantity': 67}}
+TC2:
+Request sent: http://localhost:8103/lookup/BeerCo
+Response received:  {'error': {'code': 404, 'message': 'stock not found'}}
+TC3:
+Request sent: http://localhost:8103/update
+Order to be updated:  {'name': 'GameStart', 'quantity': -2, 'traded': 2}
+Response received:  {'data': {'message': 'Success'}}
+----------------------------------------------------------------------
+Ran 3 tests in 0.020s
+OK
+
+Order Server test case result:
+TC1:
+Order:  {'name': 'GameStart', 'quantity': 2, 'type': 'buy'}
+Request sent: http://localhost:8104/trade_3
+Response received:  {'data': {'name': 'GameStart', 'quantity': '2', 'transaction_number': '7', 'type': 'buy'}}
+TC2:
+Order:  {'name': 'GameStart', 'quantity': 2000, 'type': 'buy'}
+Request sent: http://localhost:8104/trade_3
+Response received:  {'error': {'code': 403, 'message': 'Not enough stock'}}
+TC3:
+Order:  {'name': 'BeerCo', 'quantity': 5, 'type': 'buy'}
+Request sent: http://localhost:8104/trade_3
+Response received:  {'error': {'code': 404, 'message': 'stock not found'}}
+TC4:
+Order:  {'name': 'GameStart', 'quantity': 2, 'type': 'sell'}
+Request sent: http://localhost:8104/trade_3
+Response received:  {'data': {'name': 'GameStart', 'quantity': '2', 'transaction_number': '8', 'type': 'sell'}}
+TC5:
+Order:  {'name': 'BeerCo', 'quantity': 5, 'type': 'sell'}
+Request sent: http://localhost:8104/trade_3
+Response received:  {'error': {'code': 404, 'message': 'stock not found'}}
+TC6:
+Request sent: http://localhost:8104/checkorder_3/1
+Response received:  {'data': {'name': 'GameStart', 'quantity': '2', 'transaction_number': '1', 'type': 'buy'}}
+TC7:
+Request sent: http://localhost:8104/checkorder_3/0
+Response received:  {'error': {'code': 409, 'message': 'Order number does not exist'}}
+TC8:
+Request sent: http://localhost:8101/ping_1
+Response received:  {'data': {'message': 'active'}}
+Request sent: http://localhost:8102/ping_2
+Response received:  {'data': {'message': 'active'}}
+Request sent: http://localhost:8104/ping_3
+Response received:  {'data': {'message': 'active'}}
+TC9:
+Request sent: http://localhost:8101/find_leader_1
+Response received:  {'data': {'addr': 'localhost', 'leader_id': 3, 'port': '8104'}}
+Request sent: http://localhost:8102/find_leader_2
+Response received:  {'data': {'addr': 'localhost', 'leader_id': 3, 'port': '8104'}}
+Request sent: http://localhost:8104/find_leader_3
+Response received:  {'data': {'addr': 'localhost', 'leader_id': 3, 'port': '8104'}}
+----------------------------------------------------------------------
+Ran 9 tests in 0.272s
+OK
+
+Frontend Server test case result:
+TC1:
+Request sent: http://localhost:6173/stocks/GameStart
+Response received:  {'data': {'name': 'GameStart', 'price': 2.2, 'quantity': 63}}
+TC2:
+Request sent: http://localhost:6173/stocks/BeerCo
+Response received:  {'error': {'code': 404, 'message': 'stock not found'}}
+TC3:
+Order:  {'name': 'GameStart', 'quantity': 2, 'type': 'buy'}
+Request sent: http://localhost:6173/orders
+Response received:  {'data': {'name': 'GameStart', 'quantity': '2', 'transaction_number': '9', 'type': 'buy'}}
+TC4:
+Order:  {'name': 'GameStart', 'quantity': 2000, 'type': 'buy'}
+Request sent: http://localhost:6173/orders
+Response received:  {'error': {'code': 403, 'message': 'Not enough stock'}}
+TC5:
+Order:  {'name': 'BeerCo', 'quantity': 5, 'type': 'buy'}
+Request sent: http://localhost:6173/orders
+Response received:  {'error': {'code': 404, 'message': 'stock not found'}}
+TC6:
+Order:  {'name': 'GameStart', 'quantity': 2, 'type': 'sell'}
+Request sent: http://localhost:6173/orders
+Response received:  {'data': {'name': 'GameStart', 'quantity': '2', 'transaction_number': '10', 'type': 'sell'}}
+TC7:
+Order:  {'name': 'BeerCo', 'quantity': 5, 'type': 'sell'}
+Request sent: http://localhost:6173/orders
+Response received:  {'error': {'code': 404, 'message': 'stock not found'}}
+TC8:
+Stockname:  GameStart
+Request sent: http://localhost:6173/invalidate/GameStart
+Response received:  {'data': {'message': 'Stock not present'}}
+TC9:
+Request sent: http://localhost:6173/orders/1
+Response received:  {'data': {'name': 'GameStart', 'quantity': '2', 'transaction_number': '1', 'type': 'buy'}}
+TC10:
+Request sent: http://localhost:6173/orders/0
+Response received:  {'error': {'code': 409, 'message': 'Order number does not exist'}}
+----------------------------------------------------------------------
+Ran 7 tests in 0.271s
+OK

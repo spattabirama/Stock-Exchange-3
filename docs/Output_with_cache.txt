@@ -1,0 +1,138 @@
+Only Lookup:
+Lookup time for 100 requests:  7.481628791000001
+Lookup time for 100 requests:  7.553983130000012
+Lookup time for 100 requests:  7.612435004
+Lookup time for 100 requests:  7.551837045999997
+Lookup time for 100 requests:  7.617707918999998
+
+Only Trade:
+Trade time for 100 requests:  13.558931588000007
+Trade time for 100 requests:  13.469111832000007
+Trade time for 100 requests:  13.503545534999986
+Trade time for 100 requests:  13.372647335999982
+Trade time for 100 requests:  13.290893166000007
+
+Varying probability:
+Probability:  0.0
+Client 1:
+Lookup time for 100 requests:  7.481628791000001
+Trade time for 0 requests:  0
+Total time taken including a sleep of 0.04s per request: 11.857472208
+Client 2:
+Lookup time for 100 requests:  7.553983130000012
+Trade time for 0 requests:  0
+Total time taken including a sleep of 0.04s per request: 11.939990208000001
+Client 3:
+Lookup time for 100 requests:  7.612435004
+Trade time for 0 requests:  0
+Total time taken including a sleep of 0.04s per request: 11.968020083
+Client 4:
+Lookup time for 100 requests:  7.551837045999997
+Trade time for 0 requests:  0
+Total time taken including a sleep of 0.04s per request: 11.892433417
+Client 5:
+Lookup time for 100 requests:  7.617707918999998
+Trade time for 0 requests:  0
+Total time taken including a sleep of 0.04s per request: 11.979112707999999
+
+Average latency of ONE lookup request: 0.07563518
+
+Probability:  0.2
+Client 1:
+Lookup time for 100 requests:  7.544002377000006
+Trade time for 16 requests:  2.119065626000001
+Total time taken including a sleep of 0.04s per request: 15.378011458000001
+Client 2:
+Lookup time for 100 requests:  7.941503577999996
+Trade time for 15 requests:  2.0247157100000024
+Total time taken including a sleep of 0.04s per request: 15.559361625
+Client 3:
+Lookup time for 100 requests:  7.640683502000003
+Trade time for 20 requests:  2.4717316250000003
+Total time taken including a sleep of 0.04s per request: 16.255673208
+Client 4:
+Lookup time for 100 requests:  7.799973167999993
+Trade time for 14 requests:  1.7684959170000019
+Total time taken including a sleep of 0.04s per request: 15.053510750000001
+Client 5:
+Lookup time for 100 requests:  7.9316304599999965
+Trade time for 19 requests:  2.3588855820000028
+Total time taken including a sleep of 0.04s per request: 16.140481708
+
+Average latency of ONE lookup request:0.07771559
+Average latency of ONE trade request:0.1278916
+
+Probability:  0.4
+Client 1:
+Lookup time for 100 requests:  7.893138205999987
+Trade time for 34 requests:  4.307160083999999
+Total time taken including a sleep of 0.04s per request: 19.575170334
+Client 2:
+Lookup time for 100 requests:  7.8311884580000095
+Trade time for 36 requests:  4.6822254150000004
+Total time taken including a sleep of 0.04s per request: 19.943555791999998
+Client 3:
+Lookup time for 100 requests:  7.891237252999992
+Trade time for 36 requests:  4.680972960000003
+Total time taken including a sleep of 0.04s per request: 20.08571525
+Client 4:
+Lookup time for 100 requests:  8.031813668000007
+Trade time for 28 requests:  3.7411033339999937
+Total time taken including a sleep of 0.04s per request: 18.504285167000003
+Client 5:
+Lookup time for 100 requests:  7.894099664999995
+Trade time for 34 requests:  4.331906790000004
+Total time taken including a sleep of 0.04s per request: 19.563020041
+
+Average latency of ONE lookup request: 0.07908295
+Average latency of ONE trade request: 0.12942481
+
+Probability:  0.6
+Client 1:
+Lookup time for 100 requests:  8.499515166000002
+Trade time for 50 requests:  7.000114540000011
+Total time taken including a sleep of 0.04s per request: 24.789062083
+Client 2:
+Lookup time for 100 requests:  8.656565290999998
+Trade time for 53 requests:  7.669412205999999
+Total time taken including a sleep of 0.04s per request: 25.688516
+Client 3:
+Lookup time for 100 requests:  9.411613010000016
+Trade time for 47 requests:  6.133098124999996
+Total time taken including a sleep of 0.04s per request: 24.185038583
+Client 4:
+Lookup time for 100 requests:  8.834510915999996
+Trade time for 49 requests:  6.805963126000002
+Total time taken including a sleep of 0.04s per request: 24.36371425
+Client 5:
+Lookup time for 100 requests:  8.918505623000003
+Trade time for 44 requests:  5.914391668000011
+Total time taken including a sleep of 0.04s per request: 23.712885458
+
+Average latency of ONE lookup request: 0.08864142
+Average latency of ONE trade request: 0.13795465
+
+Probability:  0.8
+Client 1:
+Lookup time for 100 requests:  8.277912456999994
+Trade time for 77 requests:  10.074164455999998
+Total time taken including a sleep of 0.04s per request: 29.928418625
+Client 2:
+Lookup time for 100 requests:  8.26828436700001
+Trade time for 76 requests:  10.711967793999989
+Total time taken including a sleep of 0.04s per request: 30.684176625
+Client 3:
+Lookup time for 100 requests:  8.315332081000015
+Trade time for 75 requests:  10.362233373000004
+Total time taken including a sleep of 0.04s per request: 30.058462708999997
+Client 4:
+Lookup time for 100 requests:  8.464704376000022
+Trade time for 71 requests:  9.727901710000014
+Total time taken including a sleep of 0.04s per request: 28.608667791000002
+Client 5:
+Lookup time for 100 requests:  8.315398542
+Trade time for 79 requests:  10.779571209000014
+Total time taken including a sleep of 0.04s per request: 31.196613417
+
+Average latency of ONE lookup request: 0.08328326
+Average latency of ONE trade request: 0.13665566
